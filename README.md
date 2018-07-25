@@ -37,7 +37,7 @@ Example:
 
 Specifically:
 
-1. Complete the TODO items in the various sources until the program behaves as required.
+1. Complete the TO DO items in the various sources until the program behaves as required.
 1. Complete the test class `TestWordCount` to provide meaningful tests of the `getCount` method.
    To avoid the need for file input to populate the `WordCounter` instance,
    directly create the desired iterator like so:
@@ -61,7 +61,7 @@ Specifically:
 # Grading
 
 - 1 submission via GitHub
-- 2 completion of items marked TODO in `src/main` and correct behavior
+- 2 completion of items marked TO DO in `src/main` and correct behavior
 - 1 completion of meaningful tests in `TestWordCount`
 - 1 written part
   - 0.8 responses to the questions above

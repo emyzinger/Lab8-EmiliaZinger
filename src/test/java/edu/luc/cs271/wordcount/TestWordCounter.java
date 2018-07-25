@@ -6,37 +6,47 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+
 public class TestWordCounter {
 
   // TODO complete this test class
 
   // TODO declare a reference to the SUT (system under test), i.e., WordCounter
+  private WordCounter fixture;
 
   @Before
   public void setUp() {
-    // TODO create the SUT instance
+    Map<String, Integer> wordMap= new HashMap<String, Integer>();
+    fixture = new WordCounter(wordMap);
   }
 
   @After
   public void tearDown() {
-    // TODO set the SUT instance to null
+    fixture = null;
   }
 
   @Test
   public void testGetCountEmpty() {
-
-    // TODO verify that the SUT initially returns an empty map
-    fail();
+    assertTrue(fixture.getCounts().isEmpty());
 
   }
 
   @Test
   public void testGetCountNonEmpty() {
-
-    // TODO run the SUT on a specific String iterator with some repeated words,
+    fixture.countWords(Arrays.asList("Hey", "Hey", "how", "are", "you").iterator());
+    assertEquals(fixture.getCount("Hey"), 2);
+    assertEquals(fixture.getCount("are"), 1);
+    assertEquals(fixture.getCount("youre"), -1);
+    //int youre = fixture.getCount("youre");
+    //System.out.println(youre);
+    assertEquals(fixture.getCount("Bobby"), -1);
+    // TO DO run the SUT on a specific String iterator with some repeated words,
     // then use assertions to verify the correct counts
     // do this for at least two words in the iterator and two not in the iterator
-    fail();
+
 
   }
 }
