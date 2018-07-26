@@ -12,9 +12,9 @@ import java.util.Map;
 
 public class TestWordCounter {
 
-  // TODO complete this test class
+  // TO DO complete this test class
 
-  // TODO declare a reference to the SUT (system under test), i.e., WordCounter
+  // TO DO declare a reference to the SUT (system under test), i.e., WordCounter
   private WordCounter fixture;
 
   @Before
